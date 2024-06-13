@@ -14,15 +14,17 @@
         <th>Length</th>
         <th>Width</th>
         <th>Color</th>
+        <th>Password</th>
         <th>Actions</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="rectangle : ${rectangles}">
-        <td><a th:href="@{/rectangles/{id}(id=${rectangle.id})}" th:text="${rectangle.name}">Name</a></td>
+        <td><a th:href="@{/rectangles/{id}(id=${rectangle.id})}" th:text="${rectangle.name}"></a></td>
         <td th:text="${rectangle.length}">Length</td>
         <td th:text="${rectangle.width}">Width</td>
         <td th:text="${rectangle.color}">Color</td>
+        <td th:text="${rectangle.password}">Password</td>
         <td>
             <a th:href="@{/rectangles/delete/{id}(id=${rectangle.id})}">Delete</a>
         </td>

@@ -9,8 +9,9 @@
 <form th:action="@{/rectangles/edit/{id}(id=${rectangle.id})}" th:object="${rectangle}" method="post">
     <label>Length: <input type="text" th:field="*{length}"/></label><br/>
     <label>Width: <input type="text" th:field="*{width}"/></label><br/>
+    <label>Color: <input type="text" th:field="*{color}"/></label><br/>
+    <label>Password: <input type="text" th:field="*{password}"/></label><br/>
     <button type="submit">Save</button>
 </form>
 </body>
 </html>
-

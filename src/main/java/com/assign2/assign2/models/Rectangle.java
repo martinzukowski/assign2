@@ -16,6 +16,7 @@ public class Rectangle {
     private double length;
     private double width;
     private String color;
+    private String password;
 
     // Getters and Setters
     public Long getId() {
@@ -56,5 +57,13 @@ public class Rectangle {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
