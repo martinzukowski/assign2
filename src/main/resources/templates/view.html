@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Rectangle</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h1>View Rectangle</h1>
+<form th:action="@{/rectangles/edit/{id}(id=${rectangle.id})}" th:object="${rectangle}" method="post">
+    <p>Name: <input type="text" th:field="*{name}"/></p>
+    <p>Length: <input type="text" th:field="*{length}"/></p>
+    <p>Width: <input type="text" th:field="*{width}"/></p>
+    <p>Color: <input type="text" th:field="*{color}"/></p>
+    <button type="submit">Save</button>
+</form>
+<a th:href="@{/rectangles}">Back to list</a>
+</body>
+</html>
